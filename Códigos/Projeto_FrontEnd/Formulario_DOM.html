@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Sistema</title>
+
+    <link rel="stylesheet" href="/css/formulario_dom.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <div class="login-header">
+                <div class="icone">🔐</div>
+
+                <h1>Bem-vindo!</h1>
+
+                <p>Entre na sua conta para continuar.</p>
+            </div>
+
+
+            <form>
+
+                <div class="campo">
+
+                    <label for="usuario">
+                        Usuário
+                    </label>
+
+                    <input
+                        type="text"
+                        id="usuario"
+                        placeholder="Digite seu usuário"
+                    >
+
+                    <small id="erroUsuario"></small>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                    >
+
+                    <small id="erroSenha"></small>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    onclick="realizarLogin()"
+                >
+                    Entrar
+                </button>
+
+                <p id="mensagem"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="/js/formulario_dom.js"></script>
+
+</body>
+
+</html>

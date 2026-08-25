@@ -1,0 +1,164 @@
+/* ===================================================
+   VARIÁVEIS GLOBAIS
+   Todas as cores, tamanhos e tempos ficam centralizados.
+   Alterando apenas uma variável, todo o projeto muda.
+=================================================== */
+
+:root{
+
+    --cor-fundo: #f4f4f4;
+    --cor-card: #ffffff;
+    --cor-principal: #2563eb;
+    --cor-principal-hover: #11b234;
+    --cor-texto: #333333;
+    --espacamento:20px;
+    --borda:12px;
+
+    /* Tempo da animação */
+    --tempo:0.4s;
+
+    /* Distância utilizada no transform */
+    --deslocamento:-10px;
+
+    /* Intensidade da sombra */
+    --sombra:0px 8px 20px rgba(0,0,0,.15);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/* ===================================================
+   BODY
+=================================================== */
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--cor-fundo);
+    color:var(--cor-texto);
+}
+/* ===================================================
+   CABEÇALHO
+=================================================== */
+.cabecalho{
+    text-align:center;
+    padding:40px;
+    background:var(--cor-principal);
+    color:white;
+}
+/* ===================================================
+   ÁREA PRINCIPAL
+=================================================== */
+.conteudo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px;
+}
+
+/* ===================================================
+   CARD
+=================================================== */
+.card{
+    width:350px;
+    background:var(--cor-card);
+    padding:30px;
+    border-radius:var(--borda);
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,.08);
+    /* ----------------------------------------------
+       transition
+       Define quais propriedades serão animadas.
+       
+       duration = tempo da animação
+       
+       ease = velocidade natural do movimento
+    ---------------------------------------------- */
+    transition:
+        transform var(--tempo) ease,
+        box-shadow var(--tempo) ease,
+        background-color var(--tempo) ease;
+
+}
+
+
+/* ===================================================
+   EFEITO HOVER
+=================================================== */
+
+.card:hover{
+    /*
+        translateY move o elemento para cima.
+        Valores negativos sobem.
+        Valores positivos descem.
+    */
+    transform:rotate(5deg) translateY(var(--deslocamento)) scale(1.05);
+    box-shadow:var(--sombra);
+}
+/* ===================================================
+   TÍTULO
+=================================================== */
+.card h2{
+    margin-bottom:15px;
+}
+/* ===================================================
+   PARÁGRAFO
+=================================================== */
+.card p{
+    margin-bottom:25px;
+    line-height:1.6;
+}
+/* ===================================================
+   BOTÃO
+=================================================== */
+.botao{
+    border:none;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+    background:var(--cor-principal);
+    font-size:16px;
+    /*
+        O botão também recebe transition.
+        Assim o efeito fica suave.
+    */
+    transition:all var(--tempo);
+}
+/* ===================================================
+   BOTÃO HOVER
+=================================================== */
+
+.botao:hover{
+    background:var(--cor-principal-hover);
+    /*
+        scale aumenta ou diminui o tamanho.
+        1 = tamanho normal
+        1.1 = 10% maior
+        0.9 = 10% menor
+    */
+    transform: skew(10deg);;
+
+}
+/* ===================================================
+   RODAPÉ
+=================================================== */
+.rodape{
+    text-align:center;
+    padding:20px;
+
+}
+/* Rotaciona o card */
+/* transform: rotate(5deg); */
+/* Aumenta o card */
+/* transform: scale(1.1); */
+/* Diminui o card */
+/* transform: scale(.9); */
+/* Move para a direita */
+/* transform: translateX(40px); */
+/* Move para cima */
+/* transform: translateY(-20px); */
+/* Inclina o elemento */
+/* transform: skew(10deg); */
+/* Combina várias transformações */
+/* transform: translateY(-10px) scale(1.05) rotate(2deg); */

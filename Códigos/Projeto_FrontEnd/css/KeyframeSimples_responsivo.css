@@ -1,0 +1,349 @@
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    padding: 60px;
+
+    background: #1e293b;
+
+    border-radius: 20px;
+}
+
+
+/* ========================================
+   TEXTO
+======================================== */
+
+.hero-text {
+    flex: 1;
+}
+
+.tag {
+    display: inline-block;
+
+    margin-bottom: 15px;
+    padding: 6px 12px;
+
+    background: #38bdf8;
+    color: #0f172a;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 500px;
+
+    margin-bottom: 30px;
+
+    color: #cbd5e1;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    background: #38bdf8;
+    color: #0f172a;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: transform 0.3s ease,
+                background 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    background: #7dd3fc;
+}
+
+
+/* ========================================
+   ÁREA VISUAL
+======================================== */
+
+.hero-visual {
+    position: relative;
+
+    width: 320px;
+    height: 320px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ========================================
+   CÍRCULO ANIMADO
+======================================== */
+
+.circle {
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    border-radius: 50%;
+
+    background: #38bdf8;
+
+    opacity: 0.15;
+
+    /*
+        A animação utiliza o @keyframes
+        definido abaixo.
+    */
+    animation: pulsar 3s infinite ease-in-out;
+}
+
+
+/* ========================================
+   CARD
+======================================== */
+
+.card {
+    position: relative;
+
+    width: 200px;
+
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: #334155;
+
+    border: 1px solid #475569;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    /*
+        Outra animação utilizando keyframes.
+    */
+    animation: aparecer 1s ease-out;
+}
+.card .icon {
+    animation: entrar-lateral 0.8s ease-out;
+}
+
+.card strong {
+    animation: entrar-lateral 0.8s ease-out 0.2s both;
+}
+
+.card small {
+    animation: entrar-lateral 0.8s ease-out 0.4s both;
+}
+
+/* ========================================
+   KEYFRAMES
+======================================== */
+
+/*
+    A animação "aparecer" começa com o
+    elemento menor e transparente.
+
+    Depois ele chega ao tamanho normal.
+*/
+
+/* ========================================
+   ANIMAÇÃO DE ENTRADA LATERAL
+======================================== */
+
+@keyframes entrar-lateral {
+
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+
+/*
+    A animação "pulsar" aumenta e diminui
+    o círculo continuamente.
+*/
+
+@keyframes pulsar {
+
+    0% {
+        transform: scale(0.8);
+        opacity: 0.10;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.25;
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 0.10;
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+/*
+    Quando a tela tiver no máximo 768px,
+    algumas propriedades serão modificadas.
+*/
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .hero {
+
+        /*
+            No desktop os elementos ficam
+            lado a lado.
+
+            No celular passam a ficar
+            um abaixo do outro.
+        */
+        flex-direction: column;
+        padding: 40px 25px;
+        gap: 40px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-visual {
+        width: 280px;
+        height: 280px;
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVIDADE PARA TELAS PEQUENAS
+======================================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .hero-visual {
+        width: 230px;
+        height: 230px;
+    }
+
+    .circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .card {
+        width: 170px;
+        padding: 20px;
+    }
+
+    .icon {
+        font-size: 40px;
+    }
+
+}
