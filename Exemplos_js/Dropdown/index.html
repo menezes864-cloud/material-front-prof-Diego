@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- =================================================
+         CONFIGURAÇÕES
+         ================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dropdown | JavaScript</title>
+
+
+    <!--
+        Arquivo CSS
+    -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         CONTEÚDO PRINCIPAL
+         ================================================= -->
+
+    <main class="container">
+
+
+        <!-- =================================================
+             CABEÇALHO
+             ================================================= -->
+
+        <header class="cabecalho">
+
+            <span class="tag">
+                PROJETO 05
+            </span>
+
+            <h1>
+                Dropdown com JavaScript
+            </h1>
+
+            <p>
+
+                Clique no botão para mostrar ou
+                esconder informações.
+
+            </p>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CARD DO CURSO
+             ================================================= -->
+
+        <section class="curso">
+
+
+            <!-- =================================================
+                 INFORMAÇÕES PRINCIPAIS
+                 ================================================= -->
+
+            <div class="curso-topo">
+
+
+                <div>
+
+                    <span class="categoria">
+                        DESENVOLVIMENTO
+                    </span>
+
+
+                    <h2>
+                        JavaScript Básico
+                    </h2>
+
+
+                    <p>
+
+                        Aprenda os fundamentos da linguagem
+                        JavaScript para desenvolvimento Front End.
+
+                    </p>
+
+                </div>
+
+
+                <!--
+                    Botão responsável por abrir
+                    e fechar o dropdown.
+                -->
+
+                <button
+                    id="btnDropdown"
+                    class="btn-dropdown"
+                    aria-expanded="false"
+                >
+
+                    Ver detalhes
+
+                    <span id="icone">
+                        ▼
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DROPDOWN
+                 ================================================= -->
+
+            <!--
+                Este conteúdo começa escondido.
+
+                O JavaScript irá adicionar a classe
+                "ativo" quando o usuário clicar no botão.
+            -->
+
+            <div
+                id="dropdown"
+                class="dropdown"
+            >
+
+
+                <div class="detalhes">
+
+
+                    <div>
+
+                        <strong>
+                            Duração
+                        </strong>
+
+                        <span>
+                            40 horas
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Nível
+                        </strong>
+
+                        <span>
+                            Iniciante
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Modalidade
+                        </strong>
+
+                        <span>
+                            Presencial
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Conteúdo
+                        </strong>
+
+                        <span>
+                            HTML, CSS e JavaScript
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             EXPLICAÇÃO
+             ================================================= -->
+
+        <section class="explicacao">
+
+
+            <h2>
+                O que estamos aprendendo?
+            </h2>
+
+
+            <div class="conceitos">
+
+
+                <article>
+
+                    <strong>
+                        click
+                    </strong>
+
+                    <p>
+                        Detectamos o clique do usuário.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        classList.toggle()
+                    </strong>
+
+                    <p>
+                        Adicionamos ou removemos uma classe.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        CSS
+                    </strong>
+
+                    <p>
+                        Controlamos a aparência do dropdown.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        aria-expanded
+                    </strong>
+
+                    <p>
+                        Indicamos se o conteúdo está aberto.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================================
+         JAVASCRIPT
+         ================================================= -->
+
+    <script
+        src="script.js"
+        defer
+    ></script>
+
+
+</body>
+
+</html>

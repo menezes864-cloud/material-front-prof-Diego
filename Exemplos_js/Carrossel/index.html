@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- =================================================
+         CONFIGURAÇÕES
+         ================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Carrossel | JavaScript</title>
+
+
+    <!--
+        Arquivo CSS
+    -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         CONTEÚDO PRINCIPAL
+         ================================================= -->
+
+    <main class="container">
+
+
+        <!-- =================================================
+             CABEÇALHO
+             ================================================= -->
+
+        <header class="cabecalho">
+
+            <span class="tag">
+                PROJETO 06
+            </span>
+
+
+            <h1>
+                Carrossel com JavaScript
+            </h1>
+
+
+            <p>
+
+                Utilize os botões para navegar
+                entre os slides.
+
+            </p>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CARROSSEL
+             ================================================= -->
+
+        <section class="carrossel">
+
+
+            <!-- =================================================
+                 ÁREA DOS SLIDES
+                 ================================================= -->
+
+            <div class="slides">
+
+
+                <!-- =================================================
+                     SLIDE 1
+                     ================================================= -->
+
+                <article class="slide ativo">
+
+
+                    <span class="numero">
+                        01
+                    </span>
+
+
+                    <h2>
+                        JavaScript
+                    </h2>
+
+
+                    <p>
+
+                        Aprenda a criar páginas web
+                        interativas utilizando JavaScript.
+
+                    </p>
+
+
+                </article>
+
+
+
+                <!-- =================================================
+                     SLIDE 2
+                     ================================================= -->
+
+                <article class="slide">
+
+
+                    <span class="numero">
+                        02
+                    </span>
+
+
+                    <h2>
+                        HTML e CSS
+                    </h2>
+
+
+                    <p>
+
+                        Estruture suas páginas e crie
+                        interfaces modernas com HTML e CSS.
+
+                    </p>
+
+
+                </article>
+
+
+
+                <!-- =================================================
+                     SLIDE 3
+                     ================================================= -->
+
+                <article class="slide">
+
+
+                    <span class="numero">
+                        03
+                    </span>
+
+
+                    <h2>
+                        Python
+                    </h2>
+
+
+                    <p>
+
+                        Desenvolva seus conhecimentos
+                        em lógica e programação com Python.
+
+                    </p>
+
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CONTROLES
+                 ================================================= -->
+
+            <div class="controles">
+
+
+                <button
+                    id="btnAnterior"
+                    class="btn-controle"
+                >
+
+                    ← Anterior
+
+                </button>
+
+
+                <div class="indicadores">
+
+
+                    <span
+                        class="indicador ativo"
+                    ></span>
+
+
+                    <span
+                        class="indicador"
+                    ></span>
+
+
+                    <span
+                        class="indicador"
+                    ></span>
+
+
+                </div>
+
+
+                <button
+                    id="btnProximo"
+                    class="btn-controle"
+                >
+
+                    Próximo →
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             EXPLICAÇÃO
+             ================================================= -->
+
+        <section class="explicacao">
+
+
+            <h2>
+                O que estamos aprendendo?
+            </h2>
+
+
+            <div class="conceitos">
+
+
+                <article>
+
+                    <strong>
+                        querySelectorAll()
+                    </strong>
+
+                    <p>
+                        Encontramos vários elementos
+                        do mesmo tipo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        índice
+                    </strong>
+
+                    <p>
+                        Utilizamos uma posição para
+                        identificar cada slide.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        classList
+                    </strong>
+
+                    <p>
+                        Controlamos qual slide
+                        está visível.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        função
+                    </strong>
+
+                    <p>
+                        Organizamos a lógica de
+                        anterior e próximo.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================================
+         JAVASCRIPT
+         ================================================= -->
+
+    <script
+        src="script.js"
+    ></script>
+
+
+</body>
+
+</html>

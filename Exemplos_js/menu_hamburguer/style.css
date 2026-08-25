@@ -1,0 +1,460 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+   ===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #222;
+
+    background-color: #f5f6fa;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+   ===================================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =====================================================
+   CABEÇALHO
+   ===================================================== */
+
+.header {
+
+    width: 100%;
+
+    background-color: #ffffff;
+
+    border-bottom:
+        1px solid #e5e5e5;
+
+}
+
+
+.header-container {
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* =====================================================
+   LOGO
+   ===================================================== */
+
+.logo {
+
+    color: #5b4bdb;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+}
+
+
+/* =====================================================
+   MENU
+   ===================================================== */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.menu a {
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition:
+        color 0.2s ease;
+
+}
+
+
+.menu a:hover {
+
+    color: #5b4bdb;
+
+}
+
+
+/* =====================================================
+   BOTÃO HAMBÚRGUER
+   ===================================================== */
+
+/*
+    No computador o botão não será necessário.
+
+    Portanto, ele começa escondido.
+*/
+
+.btn-menu {
+
+    display: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    padding: 8px;
+
+    border: none;
+
+    background-color: transparent;
+
+    cursor: pointer;
+
+}
+
+
+/*
+    Cada span representa uma das três
+    linhas do ícone de hambúrguer.
+*/
+
+.btn-menu span {
+
+    display: block;
+
+    width: 100%;
+
+    height: 3px;
+
+    margin: 5px 0;
+
+    background-color: #333;
+
+    border-radius: 5px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+
+    padding: 100px 0;
+
+    background-color: #eeeeff;
+
+}
+
+
+.tag {
+
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    margin-bottom: 15px;
+
+    border-radius: 20px;
+
+    background-color: #dedbff;
+
+    color: #5b4bdb;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.hero h1 {
+
+    margin-bottom: 20px;
+
+    color: #5b4bdb;
+
+    font-size: 48px;
+
+}
+
+
+.hero p {
+
+    max-width: 650px;
+
+    margin-bottom: 10px;
+
+    color: #666;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   SEÇÕES
+   ===================================================== */
+
+.secao {
+
+    padding: 80px 0;
+
+}
+
+
+.secao h2 {
+
+    margin-bottom: 15px;
+
+    font-size: 32px;
+
+}
+
+
+.secao p {
+
+    color: #666;
+
+    font-size: 18px;
+
+}
+
+
+.secao.destaque {
+
+    background-color: #ffffff;
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+   ===================================================== */
+
+/*
+    A partir de 768px para baixo,
+    vamos transformar o menu em
+    um menu hambúrguer.
+*/
+
+@media (max-width: 768px) {
+
+
+    /* =================================================
+       BOTÃO HAMBÚRGUER
+       ================================================= */
+
+    /*
+        Agora o botão aparece.
+    */
+
+    .btn-menu {
+
+        display: block;
+
+    }
+
+
+
+    /* =================================================
+       MENU
+       ================================================= */
+
+    .menu {
+
+        /*
+            O menu deixa de ficar
+            horizontal.
+
+            Agora os links ficam
+            um abaixo do outro.
+        */
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+        background-color: #ffffff;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+
+        /*
+            Inicialmente o menu está fechado.
+        */
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+
+        transition:
+            max-height 0.3s ease,
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+
+    }
+
+
+    /*
+        Quando o JavaScript adicionar
+        a classe "ativo":
+
+            .menu.ativo
+
+        o menu será exibido.
+    */
+
+    .menu.ativo {
+
+        max-height: 300px;
+
+        opacity: 1;
+
+        visibility: visible;
+
+    }
+
+
+    /* =================================================
+       LINKS
+       ================================================= */
+
+    .menu a {
+
+        width: 100%;
+
+        padding: 15px 10px;
+
+        border-bottom:
+            1px solid #eeeeee;
+
+    }
+
+
+    /* =================================================
+       ANIMAÇÃO DO HAMBÚRGUER
+       ================================================= */
+
+    /*
+        Quando o menu estiver ativo,
+        transformamos o ícone ☰
+        visualmente em um X.
+    */
+
+
+    .btn-menu.ativo span:nth-child(1) {
+
+        transform:
+            translateY(8px)
+            rotate(45deg);
+
+    }
+
+
+    .btn-menu.ativo span:nth-child(2) {
+
+        opacity: 0;
+
+    }
+
+
+    .btn-menu.ativo span:nth-child(3) {
+
+        transform:
+            translateY(-8px)
+            rotate(-45deg);
+
+    }
+
+
+    /* =================================================
+       HERO NO CELULAR
+       ================================================= */
+
+    .hero {
+
+        padding: 70px 0;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 36px;
+
+    }
+
+
+}

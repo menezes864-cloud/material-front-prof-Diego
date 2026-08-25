@@ -1,0 +1,427 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+   ===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background-color: #f4f6fb;
+
+    color: #222;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+   ===================================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 60px 0;
+
+}
+
+
+/* =====================================================
+   CABEÇALHO
+   ===================================================== */
+
+.cabecalho {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.tag {
+
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    margin-bottom: 15px;
+
+    border-radius: 20px;
+
+    background-color: #e8e5ff;
+
+    color: #5b4bdb;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.cabecalho h1 {
+
+    margin-bottom: 15px;
+
+    color: #5b4bdb;
+
+}
+
+
+.cabecalho p {
+
+    color: #666;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   CARROSSEL
+   ===================================================== */
+
+.carrossel {
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =====================================================
+   ÁREA DOS SLIDES
+   ===================================================== */
+
+/*
+    Essa área define o espaço onde
+    os slides ficarão.
+*/
+
+.slides {
+
+    min-height: 300px;
+
+}
+
+
+/* =====================================================
+   SLIDE
+   ===================================================== */
+
+/*
+    Por padrão, todos os slides
+    ficam escondidos.
+*/
+
+.slide {
+
+    display: none;
+
+    min-height: 300px;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    background-color: #eeeeff;
+
+}
+
+
+/*
+    Apenas o slide que possui a classe
+    "ativo" será exibido.
+*/
+
+.slide.ativo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* =====================================================
+   CONTEÚDO DO SLIDE
+   ===================================================== */
+
+.numero {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 50px;
+
+    height: 50px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background-color: #5b4bdb;
+
+    color: white;
+
+    font-weight: bold;
+
+}
+
+
+.slide h2 {
+
+    margin-bottom: 15px;
+
+    color: #4032aa;
+
+    font-size: 32px;
+
+}
+
+
+.slide p {
+
+    max-width: 550px;
+
+    color: #666;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   CONTROLES
+   ===================================================== */
+
+.controles {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    gap: 20px;
+
+}
+
+
+/* =====================================================
+   BOTÕES
+   ===================================================== */
+
+.btn-controle {
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #5b4bdb;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.btn-controle:hover {
+
+    background-color: #4838c5;
+
+}
+
+
+/* =====================================================
+   INDICADORES
+   ===================================================== */
+
+.indicadores {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.indicador {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: #ccc;
+
+}
+
+
+.indicador.ativo {
+
+    background-color: #5b4bdb;
+
+}
+
+
+/* =====================================================
+   EXPLICAÇÃO
+   ===================================================== */
+
+.explicacao {
+
+    margin-top: 60px;
+
+}
+
+
+.explicacao h2 {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.conceitos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.conceitos article {
+
+    padding: 20px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+}
+
+
+.conceitos strong {
+
+    color: #5b4bdb;
+
+}
+
+
+.conceitos p {
+
+    margin-top: 8px;
+
+    color: #666;
+
+    line-height: 1.5;
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+
+    .container {
+
+        width: 92%;
+
+    }
+
+
+    .carrossel {
+
+        padding: 15px;
+
+    }
+
+
+    .slide {
+
+        padding: 40px 20px;
+
+    }
+
+
+    .slide h2 {
+
+        font-size: 26px;
+
+    }
+
+
+    .slide p {
+
+        font-size: 16px;
+
+    }
+
+
+    .controles {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+}

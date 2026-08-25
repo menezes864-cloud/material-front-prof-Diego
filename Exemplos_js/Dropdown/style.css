@@ -1,0 +1,422 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+   ===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background-color: #f4f6fb;
+
+    color: #222;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+   ===================================================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 60px 0;
+
+}
+
+
+/* =====================================================
+   CABEÇALHO
+   ===================================================== */
+
+.cabecalho {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.tag {
+
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    margin-bottom: 15px;
+
+    border-radius: 20px;
+
+    background-color: #e8e5ff;
+
+    color: #5b4bdb;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.cabecalho h1 {
+
+    margin-bottom: 15px;
+
+    color: #5b4bdb;
+
+}
+
+
+.cabecalho p {
+
+    color: #666;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   CARD DO CURSO
+   ===================================================== */
+
+.curso {
+
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =====================================================
+   TOPO DO CARD
+   ===================================================== */
+
+.curso-topo {
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.categoria {
+
+    color: #5b4bdb;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.curso h2 {
+
+    margin: 8px 0 10px;
+
+    font-size: 28px;
+
+}
+
+
+.curso-topo p {
+
+    max-width: 550px;
+
+    color: #666;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   BOTÃO DROPDOWN
+   ===================================================== */
+
+.btn-dropdown {
+
+    flex-shrink: 0;
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #5b4bdb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.btn-dropdown:hover {
+
+    background-color: #4838c5;
+
+}
+
+
+/* =====================================================
+   ÍCONE
+   ===================================================== */
+
+#icone {
+
+    display: inline-block;
+
+    margin-left: 8px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+/*
+    Quando o botão estiver ativo,
+    o ícone gira.
+*/
+
+.btn-dropdown.ativo #icone {
+
+    transform:
+        rotate(180deg);
+
+}
+
+
+/* =====================================================
+   DROPDOWN
+   ===================================================== */
+
+/*
+    Estado inicial.
+
+    O dropdown começa escondido.
+*/
+
+.dropdown {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    background-color: #f7f7ff;
+
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+}
+
+
+/* =====================================================
+   DROPDOWN ABERTO
+   ===================================================== */
+
+/*
+    Quando o JavaScript adicionar
+    a classe "ativo":
+
+        .dropdown.ativo
+
+    o conteúdo será exibido.
+*/
+
+.dropdown.ativo {
+
+    max-height: 300px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* =====================================================
+   DETALHES
+   ===================================================== */
+
+.detalhes {
+
+    padding: 25px 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    border-top:
+        1px solid #eeeeee;
+
+}
+
+
+.detalhes div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.detalhes strong {
+
+    color: #333;
+
+}
+
+
+.detalhes span {
+
+    color: #666;
+
+}
+
+
+/* =====================================================
+   EXPLICAÇÃO
+   ===================================================== */
+
+.explicacao {
+
+    margin-top: 60px;
+
+}
+
+
+.explicacao h2 {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.conceitos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.conceitos article {
+
+    padding: 20px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+}
+
+
+.conceitos strong {
+
+    color: #5b4bdb;
+
+}
+
+
+.conceitos p {
+
+    margin-top: 8px;
+
+    color: #666;
+
+    line-height: 1.5;
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+
+    .curso-topo {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .btn-dropdown {
+
+        width: 100%;
+
+    }
+
+
+    .detalhes {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+}

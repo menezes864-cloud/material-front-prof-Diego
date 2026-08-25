@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- =================================================
+         CONFIGURAÇÕES DA PÁGINA
+         ================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu Hambúrguer | JavaScript</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         CABEÇALHO
+         ================================================= -->
+
+    <header class="header">
+
+
+        <div class="container header-container">
+
+
+            <!-- =================================================
+                 LOGO
+                 ================================================= -->
+
+            <a
+                href="#" class="logo"
+            >
+
+                DevLab
+
+            </a>
+
+
+            <!-- =================================================
+                 BOTÃO DO MENU HAMBÚRGUER
+                 ================================================= -->
+
+            <!--
+                Este botão será utilizado no celular
+                para abrir e fechar o menu.
+
+                O ID "btnMenu" será encontrado
+                pelo JavaScript.
+
+            -->
+
+            <button
+                id="btnMenu" class="btn-menu"
+                      >
+
+                <!--
+                    Estes três elementos formam
+                    visualmente o ícone de hambúrguer.
+                -->
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </button>
+
+
+            <!-- =================================================
+                 MENU DE NAVEGAÇÃO
+                 ================================================= -->
+
+            <!--
+                O ID "menu" será utilizado pelo JavaScript.
+
+                No celular, o CSS deixará esse menu
+                inicialmente escondido.
+
+                Quando o JavaScript adicionar a classe
+                "ativo", o CSS irá mostrar o menu.
+            -->
+
+            <nav
+                id="menu"
+                class="menu"
+            >
+
+
+                <a href="#inicio">
+                    Início
+                </a>
+
+
+                <a href="#cursos">
+                    Cursos
+                </a>
+
+
+                <a href="#projetos">
+                    Projetos
+                </a>
+
+
+                <a href="#contato">
+                    Contato
+                </a>
+
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         CONTEÚDO PRINCIPAL
+         ================================================= -->
+
+    <main>
+
+
+        <!-- =================================================
+             SEÇÃO PRINCIPAL
+             ================================================= -->
+
+        <section
+            id="inicio" class="hero"
+        >
+
+            <div class="container">
+
+
+                <span class="tag">
+                    PROJETO 03
+                </span>
+
+
+                <h1>
+                    Menu Hambúrguer
+                </h1>
+
+
+                <p>
+
+                    Neste projeto vamos utilizar
+                    JavaScript para controlar a abertura
+                    e o fechamento de um menu.
+
+                </p>
+
+
+                <p>
+
+                    Clique no ícone ☰ no canto superior
+                    direito quando estiver utilizando
+                    uma tela pequena.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CURSOS
+             ================================================= -->
+
+        <section
+            id="cursos" class="secao"
+        >
+
+            <div class="container">
+
+                <h2>
+                    Cursos
+                </h2>
+
+                <p>
+                    Desenvolvimento Web, JavaScript,
+                    Python e muito mais.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROJETOS
+             ================================================= -->
+
+        <section
+            id="projetos" class="secao destaque"
+        >
+
+            <div class="container">
+
+                <h2>
+                    Projetos
+                </h2>
+
+                <p>
+                    Projetos práticos para aprender
+                    programação.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTATO
+             ================================================= -->
+
+        <section
+            id="contato" class="secao"
+        >
+
+            <div class="container">
+
+                <h2>
+                    Contato
+                </h2>
+
+                <p>
+                    Entre em contato conosco.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================================
+         JAVASCRIPT
+         ================================================= -->
+
+    <!--
+        O arquivo JavaScript será responsável
+        por controlar o menu.
+
+        O "defer" permite que o navegador carregue
+        o script sem bloquear o carregamento do HTML.
+    -->
+
+    <script
+        src="script.js" defer
+    ></script>
+
+
+</body>
+
+</html>
