@@ -1,0 +1,175 @@
+/*VARIAVEIS GLOBAIS
+TODAS AS CORES T TEMPOS FICAM CENTRALIZADOS ANTERANDO APENAS UMA VARIIÁVEL, TODO O PROHJETO MUDA*/
+
+
+:root {
+    --cor-fundo:#f4f4f4;
+    --cor-card:#ffffff;
+    --cor-principal:#2563eb;
+    --cor-principal-hover:#11b234;
+    --cor-texto:#333333;
+    --espacamento:20px;
+    --borda:12px;
+
+    /*tempo de animação----------------------*/
+    --tempo:0.4s;
+
+
+    /*distancia utilizada no transform-------------------------------*/
+    --deslocamento:-10px;
+
+
+    /*intensidade da sombra--------------------------------------*/
+
+    --sombra:0px 8px 20px rgba(0,0,0,.15);
+
+ }
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ /*BODY----------------------------------------------------------------*/
+
+ body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+ }
+
+ /*CABEÇALHO-----------------------------------------------------------*/
+ .cabecalho{
+    text-align: center;
+    padding: 40px;
+    background: var(--cor-principal);
+    color: white;
+ }
+
+ /*ÁREA PRINCIPAL------------------------------------------------------*/
+
+ .conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+ }
+
+ /*card-------------------------------------------------------------*/
+
+ .card{
+    width: 350px;
+    background: var(--cor-card);
+    padding: 30px;
+    border-radius: var(--borda);
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,.08);
+ 
+
+ /*trasition----------------------------------------------------------
+
+ Define quais propiedades serão animadas.
+ 
+ DURATION = tempo de animação.
+ 
+ ease = velocidade natural do movimento-------------------------------*/
+
+    transition:
+    transform var(--tempo) ease,
+    box-shadow var(--tempo) ease,
+    backgroud-color var(--tempo) ease;
+
+ }
+
+ /*EFEITO Hover-------------------------------------------------------
+ É o gatilho incial -----------------------------------------------*/
+
+ .card:hover {
+    /*
+    translateY move o elemento para cima.
+    valores NEGATIVOS (sobem)
+    valores POSITIVOS (descem)
+    ------------------------------------------------------*/
+
+    transform: rotate(5deg) translateY(var(--deslocamento)) scale(1.05);
+    box-shadow: var(--sombra);    
+ }
+
+ /*TÍTULO---------------------------------------------------------*/
+
+ .card h2 {
+    margin-bottom: 15px;
+ }
+
+ /*Parágrafo------------------------------------------------------*/
+
+.card p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/*Botão------------------------------------------------------*/
+
+.botao {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    background: var(--cor-principal);
+    font-size: 16px;
+
+/*O BOtão tambem recebe trasition
+Assim o Efeito fica Suave-------------------------------------------*/
+
+    transition:all var(--tempo);
+
+}
+
+/*Botao Hover------------------------------------------------------*/
+
+.botao:hover{
+    background: var(--cor-principal-hover);
+
+    /*scale aumenta ou diminui o tamanho.--------------------------
+    1 = tamanho normal
+    1.1 = 10% maior
+    0.9 = 10% menor
+    -----------------------------------------------------*/
+    transform: scale(1.08);
+}
+
+/*RODAPÉ------------------------------------------------------*/
+.rodape{
+    text-align: center;
+    padding: 20px;
+}   
+
+/*Rotaciona o card
+transform: rotate(5deg);
+
+Aumenta o card
+transfor: scale(1.1);
+
+diminui o carde
+transfor: scale(.9);
+
+move para a direita
+transform: translateX(40px);
+
+move para cima
+transform: translateY(-20px);
+
+inclina o elemento
+transform: skew(10deg);
+
+combina varias transfomações
+transform: translateY(-10px) scale(1.05) rotate(2deg);
+
+*/
+
+
+
+

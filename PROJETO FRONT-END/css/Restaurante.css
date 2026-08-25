@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/*Reset básico e tipografia ----------------------------------*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+        :root {
+            --cor-principal: #D32F2F; /* Vermelho urucum */
+            --cor-secundaria: #FBC02D; /* Amarelo tucupi */
+            --cor-escura: #212121;
+            --cor-clara: #FAFAFA;
+            --cor-verde: #388E3C; /* Verde jambu */
+        }
+        * {
+           margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           }
+        body {
+           background-color: var(--cor-clara); color: var(--cor-escura); line-height: 1.6;
+           }
+        
+        /* Header & Nav */
+        header {
+           background-color: var(--cor-escura); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+          }
+        .logo {
+           font-size: 1.5rem; font-weight: bold; color: var(--cor-secundaria); 
+          }
+        nav ul {
+           display: flex; list-style: none; gap: 1.5rem; 
+          }
+        nav a { 
+          color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; 
+        }
+        nav a:hover {
+           color: var(--cor-secundaria); 
+          }
+
+        /* Main & Hero Section */
+        main {
+           max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; 
+          }
+        .hero {
+           background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') no-repeat center/cover; color: white; padding: 4rem 2rem; text-align: center; border-radius: 8px; margin-bottom: 3rem; 
+          }
+        .hero h1 {
+           font-size: 2.5rem; margin-bottom: 1rem; color: var(--cor-secundaria); 
+          }
+        .hero p {
+           font-size: 1.2rem; margin-bottom: 2rem; 
+          }
+        .btn {
+           background-color: var(--cor-principal); color: white; padding: 0.8rem 2rem; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.3s; display: inline-block; 
+          }
+        .btn:hover {
+           background-color: #B71C1C; 
+          }
+
+        /* Sections & Articles */
+        section {
+           margin-bottom: 4rem; 
+          }
+        section h2 {
+           font-size: 2rem; margin-bottom: 1.5rem; text-align: center; color: var(--cor-principal); border-bottom: 3px solid var(--cor-secundaria); display: inline-block; padding-bottom: 0.5rem; 
+          }
+        .grid-pratos {
+           display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; 
+          }
+        
+        article {
+           background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-top: 4px solid var(--cor-verde); 
+          }
+        article h3 {
+           font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--cor-escura); 
+          }
+        article p {
+           font-size: 0.95rem; color: #555; margin-bottom: 1rem; 
+          }
+        .tag-destaque {
+           background-color: rgba(56, 142, 60, 0.1); color: var(--cor-verde); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; display: inline-block; margin-bottom: 0.5rem; 
+          }
+
+        /* CTA Section Form */
+        .cta-section {
+           background-color: var(--cor-secundaria); color: var(--cor-escura); padding: 3rem 2rem; border-radius: 8px; text-align: center; 
+          }
+        .cta-section h2 {
+           border: none; margin-bottom: 1rem; 
+          }
+        form {
+           display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; flex-wrap: wrap; 
+          }
+        input[type="email"] { padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; width: 300px; max-width: 100%; }
+        
+        /* Footer */
+        footer {
+           background-color: var(--cor-escura); color: #ccc; padding: 2rem; text-align: center; font-size: 0.9rem; margin-top: 4rem; 
+          }
+        footer a {
+           color: var(--cor-secundaria); text-decoration: none; 
+          }
+
